@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Processor</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            width: 100%;
+            max-width: 500px;
+            transition: transform 0.3s ease;
+        }
+        
+        .container:hover {
+            transform: translateY(-5px);
+        }
+        
+        h1 {
+            color: #333;
+            margin-bottom: 30px;
+            font-weight: 600;
+            text-align: center;
+        }
+        
+        .input-group {
+            margin-bottom: 25px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+            font-weight: 500;
+        }
+        
+        input {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #e1e1e1;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+            outline: none;
+        }
+        
+        input:focus {
+            border-color: #4a90e2;
+        }
+        
+        .output-container {
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        
+        .output-label {
+            font-weight: 500;
+            color: #555;
+            margin-bottom: 10px;
+        }
+        
+        .output-value {
+            font-size: 18px;
+            color: #333;
+            font-weight: 600;
+            min-height: 27px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Number to Arabic.</h1>
+        
+        <div class="input-group">
+            <label for="numberInput">Enter a number:</label>
+            <input 
+                type="number" 
+                id="numberInput" 
+                placeholder="Type a number here..."
+                autocomplete="off"
+            >
+        </div>
+        
+        <div class="output-container">
+            <div class="output-label">Result:</div>
+            <div id="outputValue" class="output-value"></div>
+        </div>
+    </div>
+
+    <script src="lists.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
